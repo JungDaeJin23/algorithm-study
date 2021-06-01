@@ -15,3 +15,11 @@
 ### 해외
 
 [Leetcode](https://leetcode.com/)
+
+## 어려웠던 문제들
+### SWEA
+1. [4831 전기버스](https://swexpertacademy.com/main/learn/course/lectureProblemViewer.do) Learn course intermediate List1
+
+   다시 풀어도 어렵다.
+
+   

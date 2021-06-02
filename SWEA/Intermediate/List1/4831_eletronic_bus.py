@@ -9,8 +9,8 @@ for tc in range(1, T+1):
     electric_stations = list(map(int, input().split()))
     charging_cnt = 0
     position = 0
-    # queue 사용 그러나 정류장만 탐색한다.
     passed_station = 0
+
     station_idx = 0
     while station_idx < len(electric_stations):
         if position + K >= N:
@@ -38,6 +38,8 @@ for tc in range(1, T+1):
             passed_station = electric_stations[station_idx]
 
         station_idx += 1
+    # break로 loop 탈출 시에는 실행되지 않는다.
+    # while내에서 마지막 정류소를 매번 확인 하는 것보다 while else 활용
     else:
         if passed_station:
             position = passed_station

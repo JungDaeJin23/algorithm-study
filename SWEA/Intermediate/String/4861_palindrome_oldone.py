@@ -1,4 +1,4 @@
-# Palindrome test
+# Longest_Palindrome_substring test
 # Brute force
 def is_palindrome(str1):
     n = len(str1)

@@ -25,7 +25,7 @@ def backtracking(cnt=0, row=0, col=0):
         if nr < 0 or nr >= N or nc < 0 or nc >= N or used[nr][nc] == 1:  # or matrix[nr][nc] == 0:
             continue
         # up
-        if d == 0
+        if d == 0:
             backtracking(cnt=cnt+1, row=nr, col=nc)
         # down
         elif d == 1:

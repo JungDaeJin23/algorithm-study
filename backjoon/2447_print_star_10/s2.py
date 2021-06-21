@@ -2,5 +2,5 @@
 
 
 def recursion():
-
+    pass
 N = int(input())

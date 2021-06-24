@@ -6,9 +6,13 @@ for _ in range(M):
     # all: S를 {1, 2, ..., 20} 으로 바꾼다.
     if command == 'all':
         set_arr = [1]*21
+        # for i in range(1, 21):
+        #     set_arr[i] = 1
     elif command == 'empty':
         # empty: S를 공집합으로 바꾼다.
         set_arr = [0]*21
+        # for i in range(1, 21):
+        #     set_arr[i] = 0
     else:
         operator, el = command.split()
         # add x: S에 x를 추가한다. (1 ≤ x ≤ 20) S에 x가 이미 있는 경우에는 연산을 무시한다.

@@ -6,30 +6,8 @@
 N = int(input())
 stairs = [int(input()) for _ in range(N)]
 ans = 0
+# DP
 
-# Way 3. greedy X 모든 순간의 최선의 선택이 최고의 결과를 만들지 않는다.
-flag = False
-idx = len(stairs)-1
-ans += stairs[idx]
-while idx > 0:
-    idx -= 1
-    if flag:
-        if idx == 0:
-            break
-        idx -= 1
-        bigger_one_idx = idx
-    else:
-        if idx == 0:
-            bigger_one_idx = idx
-        else:
-            if stairs[idx] >= stairs[idx-1]:
-                bigger_one_idx = idx
-                flag = True
-            else:
-                idx -= 1
-                bigger_one_idx = idx
-                flag=False
-    ans += stairs[bigger_one_idx]
 
 print(ans)
 

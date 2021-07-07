@@ -9,7 +9,7 @@ ans = 0
 # Way 1. brute force X
 
 
-# Way 2. DP, bitmask를 통한 개선 가능성?
+# Way 2. DP, bitmask를 통한 개선 가능성? brute force다
 def count_stairs(now_stair, score=0, is_in_a_row=False):
     global ans, stairs
     if now_stair < 0:

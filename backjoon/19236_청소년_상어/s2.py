@@ -66,13 +66,17 @@ def dfs(moved_aquarium, new_fishes_position, new_live_fishes, new_shark=(0, 0), 
         if nr < 0 or nr >= 4 or nc < 0 or nc >= 4 or moved_aquarium[nr][nc][0] == 0:
             continue
 
+        # deep copy
         duplicated_aquarium = []
         for i in range(4):
             duplicated_aquarium.append(moved_aquarium[i][:])
+
+        # 1차원 리스트 원소가 tuple 이기에 1차원도 deepcopy가 된다.
+        # position이 (row, col)은 mutable이여서 deepcopy로 동작 [row, col] 이면 for statement로 복사해야 된다.
         duplicated_fishes_position = new_fishes_position[:]
         duplicated_live_fishes = new_live_fishes[:]
-        dfs(duplicated_aquarium, duplicated_fishes_position, duplicated_live_fishes, new_shark=(nr, nc), eaten_fishes=eaten_fishes)
 
+        dfs(duplicated_aquarium, duplicated_fishes_position, duplicated_live_fishes, new_shark=(nr, nc), eaten_fishes=eaten_fishes)
     return
 
 

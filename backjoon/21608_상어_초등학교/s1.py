@@ -59,6 +59,7 @@ for wish in wish_list:
 #  그 값이 0이면 학생의 만족도는 0, 1이면 1, 2이면 10, 3이면 100, 4이면 1000이다.
 wish_list.sort(key=lambda x: x[0])
 ans = 0
+# score_board = [0, 1, 10, 100, 1000]
 for row in range(N):
     for col in range(N):
         cnt = 0

@@ -1,7 +1,4 @@
 # 1 ≤ N ≤ 4,000,000
-
-
-
 def combine(n, k):
     global memo
     if k > n//2:

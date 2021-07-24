@@ -8,24 +8,24 @@ dc = [0, 0, -1, 1]
 def BFS(r, c):
     global dr, dc, cq, front, rear, M, N, field
     rear += 1
-    if rear >= boundary:
-        rear = 0
+    # if rear >= boundary:
+    #     rear = 0
     # rear = (rear + 1) % boundary
     cq[rear] = (r, c)
     # visited
     field[r][c] = 0
     while rear != front:
         front += 1
-        if front >= boundary:
-            front = 0
+        # if front >= boundary:
+        #     front = 0
         row, col = cq[front]
         for d in range(4):
             nr = row + dr[d]
             nc = col + dc[d]
             if 0 <= nr < N and 0 <= nc < M and field[nr][nc] == 1:
                 rear += 1
-                if rear >= boundary:
-                    rear = 0
+                # if rear >= boundary:
+                #     rear = 0
                 cq[rear] = (nr, nc)
                 field[nr][nc] = 0
 

@@ -18,5 +18,6 @@ arr1 = [i for i in range(1, 5)]
 sub1 = [False] * len(arr1)
 ans = []
 power_set(arr1, sub1)
+
 ans.sort(key=lambda x: len(x))
 print(*ans, sep='\n')

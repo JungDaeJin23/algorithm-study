@@ -1,6 +1,7 @@
 N = input()
 arr = list(map(int, input().split()))
 dp = [1]*len(arr)
+# 1로 설정하면 마지막에 더해줄 때 -1 해야 된다. 시간은 더 늘었네 뭐지..
 reversed_dp = [1]*len(arr)
 idx = 0
 reversed_idx = len(arr)-1
@@ -16,8 +17,8 @@ while idx < len(arr):
         reversed_jdx -= 1
     idx += 1
     reversed_idx -= 1
-# print(dp)
-# print(reversed_dp)
+print(dp)
+print(reversed_dp)
 for idx in range(len(dp)):
-    dp[idx] += reversed_dp[idx]-1
+    dp[idx] += reversed_dp[idx] - 1
 print(max(dp))

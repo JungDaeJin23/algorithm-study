@@ -21,7 +21,7 @@ while idx < len(T) - len(P) + 1:
             if jdx > 0:
                 jdx -= 1
             idx += jdx - return_position[jdx]
-            jdx = tmp
+            jdx = 0
             break
         jdx += 1
     else:

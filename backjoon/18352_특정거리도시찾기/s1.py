@@ -25,12 +25,11 @@ for _ in range(N):
     visited[X] = 1
     if cost_arr[X] == K:
         break
-
+flag = 1
 for idx in range(1, len(cost_arr)):
     if cost_arr[idx] == K:
-        ans.append(idx)
-if len(ans):
-    print(*ans, sep='\n')
-else:
+        print(idx)
+        flag = 0
+if flag:
     print(-1)
 

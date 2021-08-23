@@ -1,6 +1,8 @@
 # n <= 100 N ** 3 == 10 ** 6 < 10 ** 8 (1 sec)
 n = int(input())
 m = int(input())
+# min(graph[row][col], graph[row][k] + graph[k][col]) 따라서 inf > 200000 틀림 for loop 최대 100
+# inf > 100000 * 100
 INF = int(1e9)
 graph = [[INF]*n for _ in range(n)]
 for _ in range(m):

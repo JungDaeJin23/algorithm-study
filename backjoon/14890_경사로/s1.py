@@ -15,6 +15,7 @@ for i in range(N):
             if board[i][j] == height + 1 and direction == 1 and slope_length >= L:
                 height = board[i][j]
                 slope_length = 0
+            # direction 확인 없어서 연속해서 하강하는 경우 포함 못했음
             elif board[i][j] == height - 1 and direction == 1:
                 height = board[i][j]
                 direction = -1

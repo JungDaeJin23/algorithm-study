@@ -1,6 +1,8 @@
 # SQL
 ## w3Schools
 https://www.w3schools.com/mysql/exercise.asp?filename=exercise_select1
+
+<>는 다르다를 의미한다. != ex) where A <> B
 ### 틀린 문제
 [Select3](https://www.w3schools.com/mysql/exercise.asp?filename=exercise_select3)
 Select all the different values from the Country column in the Customers table.
@@ -48,4 +50,39 @@ An alias only exists for the duration of that query.
 
 An alias is created with the AS keyword.
 
+
+[JOIN](https://www.w3schools.com/mysql/mysql_join.asp)
+SELECT *
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+[JOIN2](https://www.w3schools.com/mysql/exercise.asp?filename=exercise_join2)
+Choose the correct JOIN clause to select all records from the two tables where there is a match in both tables.
+양쪽 테이블 모두에서 만족하는 => 해석 실수. 
+
+[JOIN3](https://www.w3schools.com/mysql/exercise.asp?filename=exercise_join3)
+Choose the correct JOIN clause to select all the records from the Customers table plus all the matches in the Orders table.
+-> order 테이블 안에서, 커스토머 테이블은 plus all the matches(전부)
+
+Group BY 다음 조건에 맞게 그룹 지어라
+
+The MySQL HAVING Clause
+The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+HAVING Syntax
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+
+
+### 미학습
+Self Join
+UNION
+Having 이후로 쭉 DB까지
+
+
+## Programmers
 https://programmers.co.kr/learn/challenges?tab=sql_practice_kit
+
